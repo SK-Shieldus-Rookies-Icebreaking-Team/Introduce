@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  width: 100%;
+  padding: 3rem 1rem;
+  margin-bottom: 3rem;
+  border: none;
+  background: none;
+  position: relative; /* For positioning the fan */
+}
+
+.App-header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 4rem;
+  background: linear-gradient(90deg, #e0e0e0, #a0a0a0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  position: relative;
+  display: inline-block; /* Important for pseudo-elements */
+  padding: 0 1rem;
+}
+
+/* Decorative lines */
+.App-header h1::before, .App-header h1::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 25%;
+  height: 2px;
+  background: linear-gradient(90deg, #00ff9d, #00c4ff);
+}
+
+.App-header h1::before {
+  left: -30%;
+}
+
+.App-header h1::after {
+  right: -30%;
+}
+
+/* Header GPU Fan styles */
+.gpu-fan-header {
+  width: 250px; /* Increased size of the fan */
+  height: 250px;
+  border-radius: 50%;
+  background-color: #2a2a2a;
+  border: 3px solid #444;
+  position: absolute;
+  top: 0px; /* Adjust position to overlap more */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 0; /* Behind the title */
+  opacity: 0.3; /* Semi-transparent */
+}
+
+.gpu-fan-header::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  /* Conic gradient for fan blades */
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg 10deg, /* Gap */
+    #444 10deg 80deg,      /* Blade 1 */
+    transparent 80deg 100deg, /* Gap */
+    #444 100deg 170deg,     /* Blade 2 */
+    transparent 170deg 190deg, /* Gap */
+    #444 190deg 260deg,     /* Blade 3 */
+    transparent 260deg 280deg, /* Gap */
+    #444 280deg 350deg,     /* Blade 4 */
+    transparent 350deg 360deg /* Gap */
+  );
+  animation: fan-spin 1s linear infinite;
+}
+
+@keyframes fan-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

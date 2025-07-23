@@ -1,0 +1,9 @@
+
+.team-member-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  padding: 1rem;
+  width: 100%;
+  max-width: 1200px;
+}

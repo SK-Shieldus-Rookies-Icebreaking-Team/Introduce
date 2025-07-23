@@ -1,0 +1,64 @@
+
+.team-member-card {
+  background-color: #1e1e1e; /* Deeper dark color */
+  border: 1px solid #333; /* Subtle border */
+  border-radius: 15px; /* Softer edges */
+  padding: 2.5rem; /* More space */
+  text-align: left; /* Align text to the left for structure */
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.team-member-card:hover {
+  transform: translateY(-5px); /* Less dramatic hover effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3), 0 0 20px var(--glow-color); /* Subtle glow on hover */
+  border-color: var(--glow-color); /* Point color on hover */
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.card-icon {
+  font-size: 3.5rem; /* Slightly smaller icon */
+  margin-right: 1.5rem;
+  color: var(--glow-color); /* Point color */
+}
+
+.card-name {
+  font-size: 2rem; /* Larger name */
+  color: #e0e0e0;
+  margin: 0;
+}
+
+.card-body {
+  font-size: 1rem;
+  color: #b0b0b0;
+  line-height: 1.6;
+}
+
+.card-body h4 {
+  color: var(--glow-color); /* Use the dynamic color */
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #444;
+  padding-bottom: 0.5rem;
+}
+
+.card-body p, .card-body ul {
+  margin: 0;
+  padding: 0;
+}
+
+.card-body ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+.card-body li {
+  margin-bottom: 0.25rem;
+}
