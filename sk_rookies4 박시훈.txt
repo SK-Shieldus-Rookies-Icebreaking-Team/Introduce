@@ -1,0 +1,41 @@
+- 이름
+	박시훈
+	
+- 기술스택
+	language
+		python 3 (중)
+		C-variations(하)
+		NO-SQL(하)
+
+
+	front
+		winform(하)
+		pyqt(하)
+	back
+		pythonnet(하)
+
+	anaconda(중하)
+		machine/deep learning
+			pytorch(yolo), tensorflow, keras (하)
+		opencv(하)	
+		
+		several library(중하)
+		
+	DBMS
+		mariadb, mysql(중하)
+		mongodb (하)
+
+- MBTI
+	INTJ
+
+- 나이
+	27(1998)
+
+- 취미
+	자전거 여행
+	클래식 감상
+	게임
+	유튜브
+	
+github
+	cooperear
